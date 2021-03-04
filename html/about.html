@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About us</title>
+<link href="../css/about.css" rel="stylesheet">
+<link href="../css/font.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/imagehover.min.css" rel="stylesheet">
+<link href="../css/aos.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../js/rellax.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="js/check.js"></script>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+<a class="navbar-brand" href="../index.html">Web-Based Recruitmenet</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto text-right">
+<li class="nav-item">
+<a class="nav-link" href="../index.html">Home</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Log-in
+</a>
+<div class="dropdown-menu text-left ml-auto" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" onclick="document.getElementById('id01').style.display='block'">Candidate</a>
+<a class="dropdown-item" onclick="document.getElementById('id03').style.display='block'">Recruiter</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Register
+</a>
+<div class="dropdown-menu text-left ml-auto" aria-labelledby="navbarDropdownMenuLink">
+<a class="dropdown-item" onclick="document.getElementById('id02').style.display='block'">Candidate</a>
+<a class="dropdown-item" onclick="document.getElementById('id04').style.display='block'">Recruiter</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link active-about" href="">About us</a>
+</li>
+</ul>
+</div>  
+</nav>
+
+<div id="id01" class="modal">   
+
+  
+  
+<form id="clogin" class="modal-content animate" action="../php/c_process.php" method="post">
+<div class="head">
+	
+</div>
+
+    <div class="container">
+		<h2 align="center">Candidate Login</h2>
+		<label><b>Email</b></label>
+		  <input type="text" label="ftext" placeholder="Enter Email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'" name="email" required>
+
+		<label><b>Password</b></label>
+		<input type="password" label="ftext" placeholder="Enter Password" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Password'" name="pass" required>
+        <div id="container">
+			<button type="submit" name="c_login" value="Submit" class="login">Login</button>
+			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	</div>
+
+    
+      
+      
+
+	</form>
+
+  
+</div>
+
+<div id="id02" class="modal">   
+
+  
+  
+    <form id="c_register" class="modal-content animate" onSubmit = "return check(this)" action="../php/c_register.php" method="post">
+    <div class="head">	
+	</div>
+
+    <div class="container">
+		<h2 align="center">Candidate Register</h2>
+		<label><b>Name</b></label>
+		<input type="text" label="ftext" placeholder="Enter Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Full Name'" name="name" required>
+		<label><b>E-mail</b></label>
+		<input type="mail" label="ftext" placeholder="Enter Email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'" name="email" required>
+		<label><b>Create Password</b></label>
+		<input type="password" label="ftext" placeholder="Enter Password" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Password'" name="pass" required>
+		<label><b>Confirm Password</b></label>
+		<input type="password" label="ftext" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'" name="cnfpass" required>
+		<label><b>Date of Birth</b></label>
+		<select name="dd">
+		<option selected hidden value="00">Date</option>
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<option value="04">04</option>
+		<option value="05">05</option>
+		<option value="06">06</option>
+		<option value="07">07</option>
+		<option value="08">08</option>
+		<option value="09">09</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+		</select>
+		<select name="mm">
+		<option selected hidden value="00">Month</option>
+		<option value="01">January</option>
+		<option value="02">February</option>
+		<option value="03">March</option>
+		<option value="04">April</option>
+		<option value="05">May</option>
+		<option value="06">June</option>
+		<option value="07">July</option>
+		<option value="08">August</option>
+		<option value="09">September</option>
+		<option value="10">October</option>
+		<option value="11">November</option>
+		<option value="12">December</option>
+		</select>
+		<select name="yyyy">
+		<option selected hidden value="00">Year</option>
+		<option value="1980">1980</option>
+		<option value="1981">1981</option>
+		<option value="1982">1982</option>
+		<option value="1983">1983</option>
+		<option value="1984">1984</option>
+		<option value="1985">1985</option>
+		<option value="1986">1986</option>
+		<option value="1987">1987</option>
+		<option value="1988">1988</option>
+		<option value="1989">1989</option>
+		<option value="1990">1990</option>
+		<option value="1991">1991</option>
+		<option value="1992">1992</option>
+		<option value="1993">1993</option>
+		<option value="1994">1994</option>
+		<option value="1995">1995</option>
+		<option value="1996">1996</option>
+		<option value="1997">1997</option>
+		<option value="1998">1998</option>
+		<option value="1999">1999</option>
+		<option value="2000">2000</option>
+		<option value="2001">2001</option>
+		<option value="2002">2002</option>
+		</select><br>
+		<label><b>Gender</b></label>
+		<input type="radio" label="radio" name="gender" value="m" required>Male
+		<input type="radio" label="radio" name="gender" value="f" required>Female</br>
+		<label><b>Mobile No.</b></label>
+		<input type="text" label="fix" value="+91" name="code"readonly>
+		<input type="text" label="phn" onkeypress="return isNumberKey(event)" placeholder="Enter Mobile No." name="number" size="12px" required minlength="10" maxlength="10" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Mobile No.'">
+		<label><b>Highest Qualification</b></label>
+		<select name="qual">
+		<option selected hidden value="00">Select</option>
+		<optgroup label="Under Graduation">
+		<option value="B.B.A.">B.B.A.</option>
+		<option value="B.C.A.">B.C.A.</option>
+		<option value="B.Com.">B.Com.</option>
+		<option value="B.Sc.<">B.Sc.</option>
+		<option value="B.A.">B.A.</option>
+		</optgroup>
+		<optgroup label="Post Graduation">
+		<option value="M.B.A.">M.B.A.</option>
+		<option value="M.C.A.">M.C.A.</option>
+		<option value="M.Com.">M.Com.</option>
+		<option value="M.Sc.<">M.Sc.</option>
+		<option value="M.A.">M.A.</option>
+		</optgroup>
+		</select><br>
+		<label><b><br>Work Experience</b></label>
+		<input type="text" label="exp" onkeypress="return isNumberKey(event)" placeholder="0" name="exp" required size="1px" value="0" onclick="this.select();">
+        <label><b>yrs</b></label>
+		
+		
+		
+		
+		<div id="container">
+		<button type="submit" class="register">Register</button>
+		<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	</div>
+</form>  
+</div>
+
+
+<div id="id03" class="modal">   
+
+  
+  
+<form id="rlogin" class="modal-content animate" action="../php/r_process.php" method="post">
+<div class="head">
+	
+</div>
+
+    <div class="container">
+		<h2 align="center">Recruiter Login</h2>
+		<label><b>Email</b></label>
+		  <input type="text" label="ftext" placeholder="Enter Email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'" name="email" required>
+
+		<label><b>Password</b></label>
+		<input type="password" label="ftext" placeholder="Enter Password" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Password'" name="pass" required>
+        <div id="container">
+			<button type="submit" name="r_login" value="Submit" class="login">Login</button>
+			<button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	</div>
+
+    
+      
+      
+
+	</form>
+
+  
+</div>
+
+<div id="id04" class="modal">   
+
+  
+  
+    <form id="rregister" class="modal-content animate" onSubmit = "return check(this)" action="../php/r_register.php" method="post">
+    <div class="head">	
+	</div>
+
+    <div class="container">
+		<h2 align="center">Recruiter Register</h2>
+		<label><b>Name</b></label>
+		<input type="text" label="ftext" placeholder="Enter Full Name" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Full Name'" name="name" required>
+		<label><b>E-mail</b></label>
+		<input type="mail" label="ftext" placeholder="Enter Email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'" name="email" required>
+		<label><b>Create Password</b></label>
+		<input type="password" label="ftext" placeholder="Enter Password" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Password'" name="pass" required>
+		<label><b>Confirm Password</b></label>
+		<input type="password" label="ftext" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'" name="cnfpass" required>
+		<label><b>Company Name</b></label>
+		<input type="text" label="ftext" placeholder="Enter Company Name" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Company Name'" name="compname" required>
+		<br>
+		<label><b>Gender</b></label>
+		<input type="radio" label="radio" name="gender" value="m" required>Male
+		<input type="radio" label="radio" name="gender" value="f" required>Female</br>
+		<label><b>Mobile No.</b></label>
+		<input type="text" label="fix" value="+91" name="code"readonly>
+		<input type="text" label="phn" onkeypress="return isNumberKey(event)" placeholder="Enter Mobile No." name="number" size="12px" required minlength="10" maxlength="10" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Mobile No.'">
+		
+		
+		
+		
+		
+		<div id="container">
+		<button type="submit" class="register">Register</button>
+		<button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	</div>
+</form>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="rellax" id="top"><h1 data-aos="fade-down">About Us</h1></div>
+
+<div class="content">
+<h1 data-aos="fade-up">Our Project<p>Our project is to create a <b>Web-Based Recruitmenet Management System</b>, an online recruitment system to hold all the process of the employment for the organization and to create an automated system with the various component to facilitate the processes involved in finding, attracting, assessing and hiring a new employee.<br>A system that helps both types of user, the <b>Jobseeker</b> and the <b>Recruiter</b> in providing the ease of the manual work.</p></h1>
+<h1 data-aos="fade-up">Our Aim<p>Our aim by development of this project is to minimize the paper-work as much as possible. Presently the recruitment system include various manual process through files, folders and binders to recruit an employee for the company and jobseekers have to go through finding various job articles on every other newspaper and magazines or stray here and there in search of job.<br>Our goal is to minimize all those hassles by making an automated system where both, the <b>Jobseeker</b> and the <b>Recruiter</b> can register themselves and find the suitable job or employee.</p></h1>
+
+
+
+
+
+
+<h1 data-aos="fade-up">Our Group<p>
+<figure class="imghvr-shutter-in-out-diag-1">
+    <img src="../img/IMG_20190209_112718.jpg">
+    <figcaption>
+        <h3><br>Abhishek Prajapati<br><br>BC/20/003</h3>
+    </figcaption>
+</figure>
+<figure class="imghvr-shutter-in-out-diag-1">
+    <img src="../img/IMG_20190209_1178.jpg">
+    <figcaption>
+        <h3><br>Ashutosh Tripathi<br><br>BC/20/025</h3>
+    </figcaption>
+</figure>
+<figure class="imghvr-shutter-in-out-diag-1">
+    <img src="../img/priyaan.jpeg">
+    <figcaption>
+        <h3><br><br>Priyaan Jaiswal<br><br>BC/20/054</h3>
+    </figcaption>
+</figure>
+</p></h1>
+
+<h1 data-aos="fade-up">Our Mentor<p>
+<figure class="imghvr-shutter-in-out-diag-1">
+    <img src="../img/ss_srivastava.jpg">
+    <figcaption>
+        <h3><br><br>Mr. Shambhu Sharan Srivastava<br><br>Associate Professor</h3>
+    </figcaption>
+</figure>
+</p></h1>
+
+<section class="footer text-center">
+<a class="navbar-brand" href="#top">^Back To Top^</a>
+</section>
+
+
+
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript">AOS.init({duration : 1200,})</script>
+
+
+
+<script>
+  // Also can pass in optional settings block
+  var rellax = new Rellax('.rellax', {
+    speed: 10,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+</script>
+<!--Script for Scroll to Top -->
+<script type="text/javascript">
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 2500);
+    }
+
+});
+</script>
+<!--Script for Login Window -->
+<script>
+var modal0 = document.getElementById('id01');
+var modal1 = document.getElementById('id02');
+var modal2 = document.getElementById('id03');
+var modal3 = document.getElementById('id04');
+window.onclick = function(event) {
+    if (event.target == modal0) {
+        modal0.style.display = "none";
+    }
+	if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+	if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+	if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+</script>
